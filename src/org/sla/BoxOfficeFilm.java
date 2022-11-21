@@ -21,12 +21,7 @@ class BoxOfficeFilm extends Film {
     }
 
     // Methods
-    public String toString() {
-        String description = "\"" + this.getTitle();
-        description = description + "\" has Box Office ranking #" + this.getRank();
-        description = description + " from year " + this.getReleaseYear();
-        description = description + " grossing $" + this.getGross();
-        description = description + " and peaking at rank #" + this.getPeak();
-        return description;
+    public void describeSelf() {
+        System.out.println("\"" + this.getTitle() + "\" has Box Office ranking #" + this.getRank() + " from year " + this.getReleaseYear() + " grossing $" + this.getGross() + " and peaking at rank #" + this.getPeak());
     }
 }

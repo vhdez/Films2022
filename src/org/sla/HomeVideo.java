@@ -61,13 +61,7 @@ class HomeVideo extends Film {
     }
 
     // Methods
-    public String toString() {
-        String description = "\"" + this.getTitle();
-        description = description + "\" has Home Video ranking #" + this.getRank();
-        description = description + " from year " + this.getReleaseYear();
-        description = description + " (specifically "+ this.getReleaseDate();
-        description = description + ") grossing $" + this.getGross();
-        description = description + " based on " + this.getAllSales() + " sales";
-        return description;
+    public void describeSelf() {
+        System.out.println("\"" + this.getTitle() + "\" has Home Video ranking #" + this.getRank() + " from year " + this.getReleaseYear() + " (specifically "+ this.getReleaseDate() + ") grossing $" + this.getGross() + " based on " + this.getAllSales() + " sales");
     }
 }
