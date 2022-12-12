@@ -61,8 +61,7 @@ class HomeVideo extends Film {
     }
 
     // Methods
-    void describeSelf() {
-        super.describeSelf();
-        System.out.println("This is a HOME VIDEO: with sales equalling " + getAllSales());
+    public String toString() {
+        return "This is a HOME VIDEO named " + this.getTitle() +": with sales equalling " + getAllSales();
     }
 }
