@@ -26,7 +26,12 @@ class BoxOfficeFilm extends Film {
 
     // Methods
     public String toString() {
-        return "This is a BoxOfficeFilm named" + this.getTitle();
+        String description = "BoxOfficeFilm rank #" + getRank();
+        description = description + " is " + this.getTitle();
+        description = description + ".  It was released in " + getReleaseYear();
+        description = description + ", peaked at #" + getPeak();
+        description = description + ", and grossed $" + getGross() + ".";
+        return description;
     }
 
     static void readAllData() {
@@ -48,11 +53,9 @@ class BoxOfficeFilm extends Film {
                 new BoxOfficeFilm(rank, name,year,gross,peak);
             }
         }
-        catch(FileNotFoundException e)
-        {
+        catch(FileNotFoundException e) {
             e.printStackTrace();
-        }
-        finally {
+        } finally {
             if (sc != null) sc.close();
         }
     }
